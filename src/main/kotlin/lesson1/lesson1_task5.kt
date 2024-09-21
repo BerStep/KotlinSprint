@@ -1,8 +1,13 @@
 package org.example.lesson1
 
 fun main() {
-    val second: Int = 6480
-    val minute: Int = second / 60
-    val hour: Int = minute / 60
-    println("0$hour:${minute % 60}:0${second % 60}")
+    val converter = 60
+    var second: Int = 6480
+    var minute: Int = second / converter
+    var hour: Int = minute / converter
+    second %= converter
+    minute %= converter
+    hour %= 24
+    val time = String.format("0%d:%d:0%d", hour, minute, second)
+    println(time)
 }
