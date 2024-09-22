@@ -10,7 +10,7 @@ fun main() {
     second %= converterMinute
     minute %= converterMinute
     hour %= converterHour
-    val time = String.format("%02d:%d:%02d", hour, minute, second)
+    val time = String.format("%02d:%02d:%02d", hour, minute, second)
 
     println("Время проведенное в космосе: $time")
 }
