@@ -1,0 +1,13 @@
+fun main() {
+    var age = 20
+    var lastName = "Андреева"
+    val firstName = "Татьяна"
+    val middleName = "Сергеевна"
+
+    println("ФИО: $lastName $firstName $middleName, возраст: $age")
+
+    age = 22
+    lastName = "Сидорова"
+
+    println("ФИО: $lastName $firstName $middleName, возраст: $age")
+}
