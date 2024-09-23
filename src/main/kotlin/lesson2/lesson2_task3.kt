@@ -1,17 +1,14 @@
-package org.example.lesson2
+const val CONVERTER_MINUTES: Int = 60
+const val CONVERTER_HOURS = 24
 
 fun main() {
     val departureHour = 9
     val departureMinutes = 39
     val travelTime = 457
-    val converterMinutes = 60
-    val converterHour = 24
 
-    val departureTime = departureHour * converterMinutes + departureMinutes
+    val departureTime = departureHour * CONVERTER_MINUTES + departureMinutes
     val arriveTime = departureTime + travelTime
-    val arriveHour = arriveTime / converterMinutes % converterHour
-    val arriveMinutes = arriveTime % converterMinutes
+    val arriveHour = arriveTime / CONVERTER_MINUTES % CONVERTER_HOURS
+    val arriveMinutes = arriveTime % CONVERTER_MINUTES
 
     println("Время прибытия: ${String.format("%02d:%02d", arriveHour, arriveMinutes)}")
-}
-
