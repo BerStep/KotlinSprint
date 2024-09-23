@@ -1,0 +1,10 @@
+fun main() {
+    val userName = "Степан"
+    val halloDay = "Добрый день $userName, рады преведствовать Вас."
+    val halloNight = "Доброй ночи $userName, рады преведствовать Вас."
+    val userHallo = """
+        $halloDay
+        $halloNight
+    """.trimIndent()
+    println(userHallo)
+}
