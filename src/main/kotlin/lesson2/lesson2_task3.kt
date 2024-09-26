@@ -12,3 +12,4 @@ fun main() {
     val arriveMinutes = arriveTime % CONVERTER_MINUTES
 
     println("Время прибытия: ${String.format("%02d:%02d", arriveHour, arriveMinutes)}")
+}
