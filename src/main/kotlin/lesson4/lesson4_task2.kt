@@ -1,6 +1,6 @@
 const val MINIMUM_WEIGHT = 35
 const val MAX_WEIGHT = 100
-const val MAX_VOLUME = 120
+const val MAX_VOLUME = 100
 
 fun main() {
     val packageWeight1 = 20
@@ -9,7 +9,7 @@ fun main() {
     val packageVolume2 = 100
 
     println("Груз с весом $packageWeight1 кг и объемом $packageVolume1 л соответствует категории 'Average':" +
-            " ${(packageWeight1 in (MINIMUM_WEIGHT + 1)..MAX_WEIGHT && packageVolume1 < MAX_VOLUME)}")
+            "${packageWeight1 > MAX_WEIGHT && packageWeight1 <= MAX_WEIGHT && packageVolume1 < MAX_VOLUME}")
     println("Груз с весом $packageWeight2 кг и объемом $packageVolume2 л соответствует категории 'Average':" +
-            " ${(packageWeight2 in (MINIMUM_WEIGHT + 1)..MAX_WEIGHT && packageVolume2 < MAX_VOLUME)}")
+            "${packageWeight2 > MAX_WEIGHT && packageWeight2 <= MAX_WEIGHT && packageVolume1 < MAX_VOLUME}")
 }
