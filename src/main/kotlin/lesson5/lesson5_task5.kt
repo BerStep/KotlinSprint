@@ -22,7 +22,7 @@ fun main() {
     else println(printInfoRange)
     val comparisonOfResult = randomListWinNumber.intersect(userNumberList)
 
-    val printInfoWinThreeNumbers = "Поздравляем! Вы выйграли главный джекпот угадав  числа!"
+    val printInfoWinThreeNumbers = "Поздравляем! Вы выйграли главный джекпот угадав ${comparisonOfResult.size} числа!"
     val printInfoWinTwoNumbers = "Поздравляем! Вы выйграли крупный приз, угадав ${comparisonOfResult.size} числа!"
     val printInfoWinOneNumbers = "Вы выйграли утешительный приз, угадав ${comparisonOfResult.size} число!"
     val printInfoNoWin = "Неудача, Вы не угадали ни одного числа!"
