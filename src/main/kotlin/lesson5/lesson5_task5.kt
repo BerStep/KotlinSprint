@@ -1,11 +1,8 @@
 package org.example.lesson5
 
-import kotlin.random.Random
-import kotlin.random.nextInt
-
 fun main() {
     val range = 0..42
-    val randomListWinNumber = List(3) { Random.nextInt(range) }
+    val randomListWinNumber = List(3) { (range).random() }
     val userNumberList = mutableListOf<Int>()
     val printInfoRange = "Вы ввели число вне диапозона, данное число участвовать в лотырее не буедет."
 
@@ -34,5 +31,5 @@ fun main() {
         else -> println(printInfoNoWin)
     }
 
-    println("Выигрышные числа: $randomListWinNumber, Вы вввели: $userNumberList.")
+    println("Выигрышные числа: ${randomListWinNumber.sorted()}, Вы вввели: ${userNumberList.sorted()}.")
 }
