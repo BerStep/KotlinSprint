@@ -1,5 +1,5 @@
-const val WIN_NUMBER_1 = 23
-const val WIN_NUMBER_2 = 36
+const val WIN_NUMBER_ONE = 23
+const val WIN_NUMBER_TWO = 36
 
 fun main() {
     val range = 0..42
@@ -8,35 +8,35 @@ fun main() {
     val printInfoNoWin = "Неудача!"
 
     println("Введите два числа от 0 до 42.")
-    val userNumber1 = readlnOrNull()?.toIntOrNull() ?: return
-    val userNumber2 = readlnOrNull()?.toIntOrNull() ?: return
-    val userNumber1Reverse = userNumber1.toString().reversed().toInt()
-    val userNumber2Reverse = userNumber2.toString().reversed().toInt()
+    val userNumberOne = readlnOrNull()?.toIntOrNull() ?: return
+    val userNumberTwo = readlnOrNull()?.toIntOrNull() ?: return
+    val userNumberOneReverse = userNumberOne.toString().reversed().toInt()
+    val userNumberTwoReverse = userNumberTwo.toString().reversed().toInt()
 
-    println("Числа для победы: $WIN_NUMBER_1 и $WIN_NUMBER_2.")
+    println("Числа для победы: $WIN_NUMBER_ONE и $WIN_NUMBER_TWO.")
     println("Учитываются ввод чисел в обтаном порядке.")
 
-    if ((userNumber1) !in range) println("Вы ввели: $userNumber1, число вне диапозона. ")
-    if (userNumber1Reverse in range) println("Число $userNumber1Reverse ,будет учитываться!")
-    if (userNumber2 !in range) println("Вы ввели: $userNumber2, число вне диапозона.")
-    if (userNumber2Reverse in range) println("Число $userNumber2Reverse ,будет учитываться!")
+    if ((userNumberOne) !in range) println("Вы ввели: $userNumberOne, число вне диапозона. ")
+    if (userNumberOneReverse in range) println("Число $userNumberOneReverse ,будет учитываться!")
+    if (userNumberTwo !in range) println("Вы ввели: $userNumberTwo, число вне диапозона.")
+    if (userNumberTwoReverse in range) println("Число $userNumberTwoReverse ,будет учитываться!")
      
-    val winUserNumber1 = when {
-        userNumber1 == WIN_NUMBER_1 -> true
-        userNumber1 == WIN_NUMBER_2 -> true
-        userNumber1Reverse == WIN_NUMBER_1 -> true
-        userNumber1Reverse == WIN_NUMBER_2 -> true
+    val isWinUserNumber1 = when {
+        userNumberOne == WIN_NUMBER_ONE -> true
+        userNumberOne == WIN_NUMBER_TWO -> true
+        userNumberOneReverse == WIN_NUMBER_ONE -> true
+        userNumberOneReverse == WIN_NUMBER_TWO -> true
         else -> false
     }
-    val winUserNumber2 = when {
-        userNumber2 == WIN_NUMBER_1 -> true
-        userNumber2 == WIN_NUMBER_2 -> true
-        userNumber2Reverse == WIN_NUMBER_1 -> true
-        userNumber2Reverse == WIN_NUMBER_2 -> true
+    val isWinUserNumber2 = when {
+        userNumberTwo == WIN_NUMBER_ONE -> true
+        userNumberTwo == WIN_NUMBER_TWO -> true
+        userNumberTwoReverse == WIN_NUMBER_ONE -> true
+        userNumberTwoReverse == WIN_NUMBER_TWO -> true
         else -> false
     }
 
-    if (winUserNumber1 && winUserNumber2) println(printInfoWinTwoNumbers)
-    else if (winUserNumber1 || winUserNumber2) println(printInfoWinOneNumbers)
+    if (isWinUserNumber1 && isWinUserNumber2) println(printInfoWinTwoNumbers)
+    else if (isWinUserNumber1 || isWinUserNumber2) println(printInfoWinOneNumbers)
     else println(printInfoNoWin)
 }
