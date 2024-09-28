@@ -12,7 +12,6 @@ fun main() {
     val userNumberTwo = readlnOrNull()?.toIntOrNull() ?: return
 
     println("Числа для победы: $WIN_NUMBER_ONE и $WIN_NUMBER_TWO.")
-    println("Учитываются ввод чисел в обтаном порядке.")
 
     if ((userNumberOne) !in range) println("Вы ввели: $userNumberOne, число вне диапозона. ")
     if (userNumberTwo !in range) println("Вы ввели: $userNumberTwo, число вне диапозона.")
